@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            padding: 0 20px;
+            background-color: #333;
+        }
+
+        header .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        header .logo span {
+    position: absolute;
+    color: white; /* White text color */
+    font-size: 35px; /* Adjust text size as needed */
+    font-weight: bold; /* Bold text */
+    text-align: center;
+    text-transform: uppercase; /* Optional, makes the text uppercase */
+    display: inline;
+  margin: 13px 15px;
+}
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .rooms-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .room {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            text-align: center;
+            padding: 20px;
+            width: 300px;
+        }
+
+        .room img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+       <img src="images/icon.jpg"  alt="logo">
+        <span>LS HOME STAY</span>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="payments.html">Payment</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="rooms-list">
+        <div class="room">
+            <img src="images/deluxe_rooms/pic_3.jpeg" alt="Room 1">
+            <h3>Deluxe Room</h3>
+            <p>King Size Bed, AC, Wi-Fi, Breakfast Included</p>
+            <button onclick="location.href='room-details.html?room=Deluxe Room'">Book Now</button>
+        </div>
+        <div class="room">
+            <img src="images/Deluxe_king_suite_1/pic_2.jpeg" alt="Room 2">
+            <h3>Deluxe King Suite Room</h3>
+            <p>Queen Size Bed, AC, Wi-Fi</p>
+            <button onclick="location.href='room-details.html?room=Deluxe King Suite Room'">Book Now</button>
+        </div>
+        
+         <div class="room">
+            <img src="images/Deluxe_queen_suite_1/pic_2.jpeg" alt="Room 3">
+            <h3>Deluxe Queen Suite Room</h3>
+            <p>Queen Size Bed, AC, Wi-Fi</p>
+            <button onclick="location.href='room-details.html?room=Deluxe Queen Suite Room'">Book Now</button>
+        </div>
+        <br>
+        
+         <div class="room">
+            <img src="images/Premium_darments/pic_12.jpeg" alt="Darment 1">
+            <h3>Premium Darment</h3>
+            <p>King Size Bed, AC, Wi-Fi, Breakfast Included</p>
+            <button onclick="location.href='room-details.html?room=Premium Darment'">Book Now</button>
+        </div>
+        <div class="room">
+            <img src="images/king_darments/pic_5.jpeg" alt="Darment 2">
+            <h3>King Darment Room</h3>
+            <p>Queen Size Bed, AC, Wi-Fi</p>
+            <button onclick="location.href='room-details.html?room=King Darment'">Book Now</button>
+        </div>
+        
+         <div class="room">
+            <img src="images/Queen_darments/pic_2.jpeg" alt="Darment 3">
+            <h3>Queen Darment</h3>
+            <p>Queen Size Bed, AC, Wi-Fi</p>
+            <button onclick="location.href='room-details.html?room=Queen Darment'">Book Now</button>
+        </div>
+        
+    </div>
+</main>
+
+<footer>
+    <p>Location: No,10 P.U Shanmugam Nagar, Polur Road, Thiruvannamalai</p>
+</footer>
+
+</body>
+</html>

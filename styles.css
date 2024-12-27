@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; /* Adjust the height as needed */
+    padding: 0 20px; /* Padding to provide spacing */
+    background-color: #333; /* Optional, add a background color */
+}
+
+/* Logo styling to create a circle */
+header .logo img {
+    width: 60px; /* Adjust the size to fit the header */
+    height: 60px; /* Set the same height as width to maintain the circle shape */
+    border-radius: 50%; /* Makes the logo circular */
+    object-fit: cover; /* Ensures the image covers the circle without stretching */
+}
+header .logo span {
+    position: absolute;
+    color: white; /* White text color */
+    font-size: 35px; /* Adjust text size as needed */
+    font-weight: bold; /* Bold text */
+    text-align: center;
+    text-transform: uppercase; /* Optional, makes the text uppercase */
+    display: inline;
+  margin: 13px 15px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.property-images {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen */
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description {
+    padding: 20px;
+    text-align: center;
+}
+
+.facilities {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.facility {
+    text-align: center;
+}
+
+.facility img {
+    width: 100px;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Right Corner Booking Form */
+.right-corner-booking {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    background-color: white;
+    width: 300px; /* Medium size */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow for a raised effect */
+    z-index: 10; /* Ensure it appears over other content */
+}
+
+.right-corner-booking h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.right-corner-booking form {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-corner-booking form label {
+    margin-bottom: 8px;
+}
+
+.right-corner-booking form input {
+    padding: 8px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.right-corner-booking form button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.right-corner-booking form button:hover {
+    background-color: #218838;
+}
+.rooms-list {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.room {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+}
+
+.room img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+.room h3 {
+    margin-top: 10px;
+}
+
+.room p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.room button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.payment-form {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.payment-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.payment-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.payment-form button:hover {
+    background-color: #218838;
+}
+.content {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.4;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        h2 span {
+            color: #e74c3c; /* Highlight color */
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        p span {
+            color: #16a085; /* Accent color */
+            font-weight: bold;
+        }

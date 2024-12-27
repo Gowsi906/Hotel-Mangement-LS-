@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Room Details</title>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 80px;
+                padding: 0 20px;
+                background-color: #333;
+            }
+
+            header .logo img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            header .logo span {
+                position: absolute;
+                color: white; /* White text color */
+                font-size: 35px; /* Adjust text size as needed */
+                font-weight: bold; /* Bold text */
+                text-align: center;
+                text-transform: uppercase; /* Optional, makes the text uppercase */
+                display: inline;
+                margin: 13px 15px;
+            }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            nav ul li {
+                display: inline;
+                margin: 0 15px;
+            }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+            }
+
+            footer {
+                background-color: #333;
+                color: white;
+                width: 100%;
+                text-align: center;
+                padding: 15px 0;
+                margin-top: auto;
+            }
+
+            .room-gallery {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .gallery img {
+                width: 30%;
+                margin: 10px;
+                border-radius: 8px;
+            }
+
+            .room-details {
+                text-align: left;
+                max-width: 600px;
+                margin-top: 20px;
+            }
+
+            .room-details h3 {
+                margin-bottom: 10px;
+            }
+
+            .room-details p {
+                margin: 5px 0;
+            }
+
+            .facilities {
+                display: flex;
+                flex-direction: column;
+                justify-content: center; /* Center vertically */
+                align-items: center; /* Center horizontally */
+                text-align: center;
+                margin: 20px auto;
+                padding: 20px;
+                width: 80%; /* Optional: Constrain the width */
+                max-width: 800px; /* Optional: Limit maximum width for large screens */
+                background-color: #f9f9f9; /* Optional: Add a light background for better visibility */
+                border-radius: 10px; /* Optional: Round corners */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+            }
+
+            .facilities ul {
+                list-style-type: none; /* Remove default bullets */
+                padding: 0; /* Remove padding */
+                margin: 0; /* Remove margin */
+                text-align: left; /* Align the text to the left */
+                width: 100%; /* Make the list take full width of the parent */
+                max-width: 500px; /* Optional: Limit the width for better alignment */
+            }
+
+            .facilities li {
+                margin: 5px 0; /* Add spacing between list items */
+                padding: 8px 10px; /* Add padding for better visibility */
+                border-bottom: 1px solid #ddd; /* Optional: Add a separator */
+            }
+
+            section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center; /* Center vertically */
+                align-items: center; /* Center horizontally */
+                text-align: center; /* Center-align text content */
+                margin: 20px auto; /* Optional: Add margin to separate sections */
+                padding: 20px; /* Optional: Add padding for spacing */
+                width: 80%; /* Optional: Constrain the width */
+                max-width: 800px; /* Optional: Limit maximum width for large screens */
+                background-color: #f9f9f9; /* Optional: Add a light background for better visibility */
+                border-radius: 10px; /* Optional: Round corners */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+            }
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <div class="logo">
+                <img src="images/icon.jpg"  alt="logo">
+                <span>LS HOME STAY</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rooms.html">Rooms</a></li>
+                    <li><a href="payments.html">Payment</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="room-details" id="room-details">
+            <!-- Room details will be populated here -->
+        </section>
+
+        <section class="room-gallery">
+            <div class="gallery" id="gallery"></div>
+        </section>
+
+        <section class="facilities" id="facilities">
+            <!-- Facilities will be populated here -->
+        </section>
+
+        <footer>
+            <p>Location: No,10 P.U Shanmugam Nagar, Polur Road, Thiruvannamalai</p>
+        </footer>
+
+        <script>
+            const roomData = {
+                "Deluxe Room": {
+                    folder: "images/deluxe_rooms",
+                    images: 11,
+                    type: "Deluxe Room",
+                    beds: 2,
+                    facilities: ["Free Wi-Fi", "Air Conditioning", "TV with Cable", "Minibar", "Room Service", "Experience comfort, luxury, and affordability at LS Homestay. Book now"],
+                    amenities: ["2 Beds", "1 Toilet"],
+                    price: "₹2,499 per day"
+                },
+                "Deluxe King Suite Room": {
+                    folder: "images/Deluxe_king_suite_1",
+                    images: 13,
+                    type: "Deluxe King Suite Room",
+                    beds: 1,
+                    facilities: ["King Bed", "Wi-Fi", "Jacuzzi", "Private Balcony", "Room Service", "Experience comfort, luxury, and affordability at LS Homestay. Book now"],
+                    amenities: ["2 Beds", "1 Lounge", " 2 Toilets"],
+                    price: "₹5,999 per day"
+                },
+                "Deluxe Queen Suite Room": {
+                    folder: "images/Deluxe_queen_suite_1",
+                    images: 16,
+                    type: "Deluxe Queen Suite Room",
+                    beds: 1,
+                    facilities: ["Queen Bed", "Free Wi-Fi", "TV with Cable", "Room Service", "Experience comfort, luxury, and affordability at LS Homestay. Book now"],
+                    amenities: ["2 Beds", "1 Lounge", " 2 Toilets"],
+                    price: "₹5,999 per day"
+                },
+                "Premium Darment": {
+                    folder: "images/Premium_darments",
+                    images: 16,
+                    type: "Premium Darment",
+                    beds: 3,
+                    facilities: ["Wi-Fi", "Luxury Sofa", "Private Kitchen", "Room Service", "Experience comfort, luxury, and affordability at LS Homestay. Book now"],
+                    amenities: ["18 Beds", " 2 Toilets", "Extra beds available upon request"],
+                    price: "₹999 per bed"
+                },
+                "King Darment": {
+                    folder: "images/king_darments",
+                    images: 8,
+                    type: "King Darment",
+                    beds: 1,
+                    facilities: ["King Bed", "Jacuzzi", "Room Service", "Experience comfort, luxury, and affordability at LS Homestay. Book now"],
+                    amenities: ["10 Beds", " 2 Toilets", "1 Bathroom"],
+                    price: "₹999 per bed"
+                },
+                "Queen Darment": {
+                    folder: "images/Queen_darments",
+                    images: 7,
+                    type: "Queen Darment",
+                    beds: 1,
+                    facilities: ["Queen Bed", "Wi-Fi", "Room Service", "Experience comfort, luxury, and affordability at LS Homestay. Book now"],
+                    amenities: ["9 Beds", " 2 Toilets", "1 Bathroom"],
+                    price: "₹999 per bed"
+                }
+            };
+
+            function getURLParameter(name) {
+                return new URLSearchParams(window.location.search).get(name);
+            }
+
+            function loadRoomDetails() {
+                const roomCategory = getURLParameter("room");
+                const gallery = document.getElementById("gallery");
+                const roomDetails = document.getElementById("room-details");
+                const facilities = document.getElementById("facilities");
+
+                gallery.innerHTML = "";
+                roomDetails.innerHTML = "";
+                facilities.innerHTML = "";
+
+                if (roomCategory && roomData[roomCategory]) {
+                    const room = roomData[roomCategory];
+
+                    for (let i = 1; i <= room.images; i++) {
+                        const img = document.createElement("img");
+                        img.src = `${room.folder}/pic_${i}.jpeg`;
+                        img.alt = `Room Image ${i}`;
+                        gallery.appendChild(img);
+                    }
+
+                    roomDetails.innerHTML = `
+                        <h3>${room.type}</h3>
+                        <p><strong>Number of Beds:</strong> ${room.beds}</p>
+                        <p><strong>Amenities:</strong> ${room.amenities.join(", ")}</p>
+                        <p><strong>Price per Night:</strong> ${room.price}</p>
+                    `;
+
+                    facilities.innerHTML = `
+            <h4>Facilities</h4>
+            <ul>${room.facilities.map(facility => `<li>${facility}</li>`).join("")}</ul>
+        `;
+                } else {
+                    roomDetails.innerHTML = "<p>Room details not found. Please check the URL parameter.</p>";
+                }
+            }
+
+            loadRoomDetails();
+        </script>
+
+    </body>
+</html>
